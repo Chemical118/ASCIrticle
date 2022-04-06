@@ -1,5 +1,4 @@
 # ASCIrticle Project
-***
 Using Random Forest in citrate synthase activity in heart muscle
 
 ***
