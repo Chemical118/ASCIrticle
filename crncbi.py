@@ -2,13 +2,17 @@ from Bio import Entrez
 
 import pandas as pd
 
-Entrez.email = 'wowo0118@korea.ac.kr'
-df = pd.read_excel('data.xls')
-df_list = map(lambda t: t[0], df.values.tolist())
+Entrez.email = 'socialhomework209@gmail.com'
+df = pd.read_excel('Data/data.xls')  # ['Spcies', 'Reference', 'NCBI No.']
+df_list = df.values.tolist()
 
-for i in df_list:
-    handle = Entrez.esearch('protein', i + 'citrate synthase')
-    t = Entrez.read(handle)
-    print(t['IdList'])
-    q = Entrez.efetch('protein', id=t['IdList'][0], rettypee='gb', retmode='text')
-    print(q)
+for ind, val in enumerate(df_list):
+    # if val[0] != 'Calidris pugnax':
+    #     continue
+    print(ind)
+    handle = Entrez.efetch(db='protein', id=val[2], rettype='fasta', retmode='text')
+    with open('Pdata/' + str(ind) + '.fasta', 'w') as f:
+        f.write(handle.read())
+    handle = Entrez.efetch(db='protein', id=val[2], rettype='gb', retmode='text')
+    with open('Pdata/genprpt/' + str(ind) + '.gp', 'w') as f:
+        f.write(handle.read())
