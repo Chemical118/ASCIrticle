@@ -5,3 +5,10 @@
 ## 4/8
 + CS activity 정리
 + Fasta 파일 묶어서 clustx에 정리
+
+## 4/9
++ CS data 정리
++ Protein visualizaiton 마무리
+    + Tree
+    + Aligment 시각화
++ 정럴에서의 노이즈 확인 기준 정하기
