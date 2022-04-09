@@ -4,10 +4,9 @@ from viewer import view_alignment
 
 import os
 
-cline = ClustalOmegaCommandline(infile='Data/gpdata.fasta',
-                                outfile='Data/alngpdata.fasta',
-                                guidetree_out='Data/Tree/gpdata.dnd', verbose=True, auto=True, force=True)
+# # cline = ClustalOmegaCommandline(infile='Data/gpdata.fasta',
+# #                                 outfile='Data/algpdata.fasta', verbose=True, force=True)
+# os.system(str(cline))
 
-os.system(str(cline))
-aln = SeqIO.parse('Data/alngpdata.fasta', 'fasta')
+aln = SeqIO.parse('Data/algpdata.fasta', 'fasta')
 view_alignment(list(aln))

@@ -1,0 +1,17 @@
+clustalw \
+/infile=/us1/user/julie/clustalx/globin.gde \
+/type=protein \
+/pwmatrix=gonnet \
+/pwgapopen=10.00 \
+/pwgapext=0.10 \
+/matrix=pam \
+/gapopen=10.00 \
+/gapext=0.05 \
+/maxdiv=60 \
+/endgaps \
+/negative \
+/nopgap \
+/hgapresidues=GPSQEKR \
+/gapdist=8 \
+/outorder=aligned \
+/interactive

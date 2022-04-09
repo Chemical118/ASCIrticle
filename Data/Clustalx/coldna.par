@@ -1,0 +1,16 @@
+# color lookup table - this is optional, if no rgbindex is specified, 8
+# hardcoded colors will be used.
+# A maximum of 16 colors can be specified - any more will be ignored!
+@rgbindex
+RED          0.9 0.2 0.1
+BLUE         0.1 0.5 0.9
+GREEN        0.1 0.8 0.1
+ORANGE       0.9 0.6 0.3
+ 
+
+@color
+a = RED
+c = BLUE
+g = ORANGE
+t = GREEN
+u = GREEN

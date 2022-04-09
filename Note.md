@@ -12,3 +12,7 @@
     + Tree
     + Aligment 시각화
 + 정럴에서의 노이즈 확인 기준 정하기
+
+## 4/10
++ Random Forest 실행
++ 데이터 추가 정리 (gap 관련)

@@ -1,0 +1,73 @@
+@rgbindex
+WHITE        1.0 1.0 1.0
+YELLOW       1.0 1.0 0.0
+VIOLET       0.4 0.1 0.9
+RED          0.9 0.5 0.4
+AQUA         0.7 0.9 0.7
+GREEN        0.6 0.8 0.4
+BLUE         0.4 0.9 0.9
+PURPLE       0.7 0.6 0.9
+BLACK        0.0 0.0 0.0
+GREY         0.6 0.7 0.7
+LIGHTBLUE    0.8 0.9 0.9
+LIGHTGREEN   0.8 1.0 0.8
+PINK         0.8 0.3 0.8
+LIGHTYELLOW  1.0 1.0 0.0
+ORANGE       0.9 0.7 0.3
+
+@consensus
+% = 50% w:l:v:i:m:a:f:c:y:h:p
+# = 85% w:l:v:i:m:a:f:c:y:h:p
+n = 50% n:d
+- = 50% e:d
++ = 50% k:r:h
+$ = 70% w:l:v:i:m:a:f:c:y:h:p:r:k
+g = 50% g
+q = 60% q
+p = 50% p
+t = 50% t:s:n
+A = 85% a
+C = 85% c
+D = 85% d
+E = 85% e
+F = 85% f
+G = 85% g
+H = 85% h
+I = 85% i
+K = 85% k
+L = 85% l
+M = 85% m
+N = 85% n
+P = 85% p
+Q = 85% q
+R = 85% r
+S = 85% s
+T = 85% t
+V = 85% v
+W = 85% w
+Y = 85% y
+
+@color
+g = ORANGE
+p = LIGHTYELLOW
+t = GREEN if t:S:T:n:N:#:%:$
+s = GREEN if t:S:T:n:N:#:%:$:a:A
+n = GREEN if t:n:N:D:-:g:G
+q = GREEN if q:Q:E:K:R:+:-
+w = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+l = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+v = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+i = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+m = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+a = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+f = BLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+c = BLUE if %:#:$:A:F:H:I:L:M:V:W:Y:S:P:p
+c = PINK if C
+h = LIGHTBLUE if %:#:A:C:F:I:L:M:V:W:Y:P:p
+y = LIGHTBLUE if %:#:$:A:C:F:H:I:L:M:V:W:Y:P:p
+e = PURPLE if -:D:E:q:Q
+d = PURPLE if -:D:E:n:N:t
+k = RED if +:K:R:$:H:Q:q
+r = RED if +:K:R:$:H:Q:q
+h = PINK if +:K:R:$:H:Q:q
+
