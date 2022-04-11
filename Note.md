@@ -21,3 +21,6 @@
 + Pycharm에서 git 하기
   + gpg에서 key 저장하기
   + git config --global user.email (이메일) 설정
+
+## 4/12
++ Code 최적화 완료 -> 모든 함수를 toolbox에 몰아넣었음, 예제 곧 만들 예정

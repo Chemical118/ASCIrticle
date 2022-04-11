@@ -404,7 +404,7 @@ def get_reg_importance(x, y, loc, feet, tree, split_size=0.3, val_mode=False, sh
         plot.axis('square')
         plot.xlim([0, plot.xlim()[1]])
         plot.ylim([0, plot.ylim()[1]])
-        _ = plot.plot([-100, 100], [-100, 100])
+        _ = plot.plot([-100, 100], [-100, 100], color='black')
         plot.show()
 
 
