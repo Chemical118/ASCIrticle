@@ -107,6 +107,24 @@ def view_alignment(loc, typ='fasta', fontsize="9pt", plot_width=800):
     show(p)
 
 
+def view_reg3d(z, nfeat, ntree):
+    from matplotlib import cm
+    from matplotlib.ticker import LinearLocator
+
+    import numpy as np
+    import matplotlib.pyplot as plot
+
+    fig, ax = plot.subplots(subplot_kw={"projection": "3d"})
+    n_feat_list, n_tree_list = np.meshgrid(np.arange(*nfeat), np.arange(*ntree))
+    surf = ax.plot_surface(n_feat_list, n_tree_list, z, cmap=cm.coolwarm,
+                           linewidth=0, antialiased=False)
+    ax.set_zlim(np.min(z), np.max(z) * 1.05)
+    ax.zaxis.set_major_locator(LinearLocator(10))
+
+    fig.colorbar(surf, shrink=0.5, aspect=5)
+    plot.show()
+
+
 def blo62(pair):
     """
     순서에 상관없이 matrix를 이용하도록 간단한 in을 이용해서 사용하는 함수
@@ -236,6 +254,89 @@ def process():
             dt_list.append(ind)
             dtnum_list.append(len(data) - max(map(lambda te: len(te), val[1].values())))  # 5/12 수정 (최소가 아닌 최대의 나머지 개수)
     return pro, dt_list, dtnum_list
+
+
+def get_data(ami_arr=12, norm=False):
+    from random import shuffle
+
+    import numpy as np
+    pros = process()
+    data = data_list()
+    pro = pros[0]
+
+    dtot_list = list(zip(pros[1], pros[2]))  # dtot_list : [(아미노산 위치, mutation 개수).. ]
+    nogap_dtot_list = \
+        list(filter(lambda t: '-' not in pro[t[0]][1].keys() and 'X' not in pro[t[0]][1].keys(), dtot_list))
+    # gap또는 X가 없는 위치만 표시
+    nogap_dtot_list = list(filter(lambda t: t[1] > ami_arr, nogap_dtot_list))  # 12개 이상의 mutaion을 가지는 dtot_list
+    test_loca_list = list(map(lambda t: [t[0]], nogap_dtot_list))  # [[아미노산의 위치, motif 서열].. ]
+    # 원하는 값에 대해서 최대 최소 찾기
+    tar = 3
+    data.sort(key=lambda t: -t[1][tar])
+    # data = data[1:]
+    shuffle(data)
+    tar_min = min(map(lambda t: t[1][tar], data))
+    tar_max = max(map(lambda t: t[1][tar], data))
+    num_data = len(data)
+    num_motif = len(test_loca_list)
+    train_data = np.zeros((num_data, num_motif))
+    train_label = np.zeros(num_data)
+
+    for ind, val in enumerate(test_loca_list):
+        len_list = list(map(lambda t: len(t), pro[val[0]][1].values()))
+        test_loca_list[ind].append(pro[val[0]][0][np.argmax(len_list)])
+
+    print(len(test_loca_list))
+    if norm:
+        for i, sdata in enumerate(data):
+            for ind, val in enumerate(test_loca_list):
+                pro_loc = val[0]
+                pro_mot = val[1]
+                train_data[i][ind] = blo62((pro_mot, sdata[0][pro_loc]))  # 0 이상으로 변환
+            tar_val = sdata[1][tar]
+            tar_ind = (tar_val - tar_min) / (tar_max - tar_min)
+            train_label[i] = tar_ind
+    else:
+        for i, sdata in enumerate(data):
+            for ind, val in enumerate(test_loca_list):
+                pro_loc = val[0]
+                pro_mot = val[1]
+                train_data[i][ind] = blo62((pro_mot, sdata[0][pro_loc]))  # 0 이상으로 변환
+            tar_val = sdata[1][tar]
+            train_label[i] = tar_val / 100
+
+    return train_data, train_label, test_loca_list
+
+
+def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val=False):
+    from sklearn import ensemble
+    from sklearn.metrics import mean_squared_error
+    from sklearn.model_selection import train_test_split
+
+    import numpy as np
+
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=split_size)
+    n_feat_list = np.arange(*nfeat)
+    n_tree_list = np.arange(*ntree)
+    z = np.zeros((len(n_tree_list), len(n_feat_list)))
+    for idx, maxFeat in enumerate(n_feat_list):
+        for jdx, iTrees in enumerate(n_tree_list):
+            depth = None
+            # maxFeat = 5 #조정해볼 것
+            wineRFModel = ensemble.RandomForestRegressor(n_estimators=iTrees,
+                                                         max_depth=depth, max_features=maxFeat,
+                                                         oob_score=False, n_jobs=-1)
+            wineRFModel.fit(x_train, y_train)
+            # 데이터 세트에 대한 MSE 누적
+            prediction = wineRFModel.predict(x_test)
+            z[jdx][idx] = mean_squared_error(y_test, prediction)
+
+    if val:
+        return z
+    else:
+        from numpy import unravel_index
+        loc = unravel_index(z.argmin(), z.shape)
+        return n_feat_list[loc[1]], n_tree_list[loc[0]], z
 
 
 if __name__ == "__main__":

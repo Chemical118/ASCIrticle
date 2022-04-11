@@ -16,13 +16,12 @@ data = data_list()
 pro = pros[0]
 
 dtot_list = list(zip(pros[1], pros[2]))  # dtot_list : [(아미노산 위치, mutation 개수).. ]
-nogap_dtot_list = list(filter(lambda t: '-' not in pro[t[0]][1].keys() or 'X' not in pro[t[0]][1].keys(), dtot_list))
+nogap_dtot_list = list(filter(lambda t: '-' not in pro[t[0]][1].keys() and 'X' not in pro[t[0]][1].keys(), dtot_list))
 # gap또는 X가 없는 위치만 표시
 nogap_dtot_list = list(filter(lambda t: t[1] > 12, nogap_dtot_list))  # 12개 이상의 mutaion을 가지는 dtot_list
 test_loca_list = list(map(lambda t: [t[0]], nogap_dtot_list))  # [[아미노산의 위치, motif 서열].. ]
 # 원하는 값에 대해서 최대 최소 찾기
 tar = 3
-# check
 data.sort(key=lambda t: -t[1][tar])
 # data = data[1:]
 shuffle(data)
@@ -49,7 +48,7 @@ for i, sdata in enumerate(data):
 
 X = train_data
 Y = train_label
-wineNames = np.array(list(map(lambda t: t[0] + 1, test_loca_list)))
+
 xTrain, xTest, yTrain, yTest = train_test_split(X, Y, test_size=0.3)
 print(len(xTrain), len(xTest))
 mseOos = []
@@ -86,13 +85,13 @@ print(mean_squared_error(yTest, prediction))
 featureImportance = regr.feature_importances_
 
 # 가장 높은 중요도 기준으로 스케일링
+wineNames = np.array(list(map(lambda t: t[0] + 1 + 28, test_loca_list)))
 featureImportance = featureImportance / featureImportance.max()
 sorted_idx = np.argsort(featureImportance)
 barPos = np.arange(sorted_idx.shape[0]) + .5
 plot.barh(barPos, featureImportance[sorted_idx], align='center')
 plot.yticks(barPos, wineNames[sorted_idx])
 plot.xlabel('Variable Importance')
-print()
 plot.show()
 
 plot.scatter(Y, regr.predict(X))
