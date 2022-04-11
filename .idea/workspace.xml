@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c90ef87-b211-45bc-8888-6e5131b5072b" name="변경" comment="qw">
+      <change beforePath="$PROJECT_DIR$/PData/16.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/16.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/17.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/17.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/18.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/18.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/19.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/19.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/20.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/20.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/21.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/21.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/22.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/22.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/23.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/23.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/24.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/24.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/25.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/25.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/26.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/26.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/27.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/27.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/28.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/28.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/29.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/29.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/30.fasta" beforeDir="false" afterPath="$PROJECT_DIR$/PData/30.fasta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/16.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/16.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/17.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/17.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/18.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/18.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/19.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/19.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/20.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/20.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/21.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/21.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/22.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/22.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/23.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/23.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/24.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/24.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/25.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/25.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/26.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/26.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/27.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/27.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/28.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/28.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/29.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/29.gp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PData/genprpt/30.gp" beforeDir="false" afterPath="$PROJECT_DIR$/PData/genprpt/30.gp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27dEabfhkZ38w9QmsIY2BCSFDYf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="7c90ef87-b211-45bc-8888-6e5131b5072b" name="변경" comment="" />
+      <created>1649641628370</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649641628370</updated>
+      <workItem from="1649641631312" duration="131000" />
+      <workItem from="1649642374806" duration="43000" />
+      <workItem from="1649642427003" duration="459000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="qw" />
+    <option name="LAST_COMMIT_MESSAGE" value="qw" />
+  </component>
+</project>
