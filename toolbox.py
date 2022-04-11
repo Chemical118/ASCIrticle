@@ -1,3 +1,6 @@
+amino_loc = 28
+
+
 def get_id_list():
     from Bio import SeqIO
     return list(map(lambda t: t.id, SeqIO.parse('Data/gpdata.fasta', 'fasta')))
@@ -29,6 +32,11 @@ def get_colors(seqs):
             'X': 'white'}
     colors = [clrs[it] for it in text]
     return colors
+
+
+def get_amino_loc(loca):
+    import numpy as np
+    return np.array(list(map(lambda t: t[0] + 1 + amino_loc, loca)))
 
 
 def view_alignment(loc, typ='fasta', fontsize="9pt", plot_width=800):
@@ -116,12 +124,26 @@ def view_reg3d(z, nfeat, ntree):
 
     fig, ax = plot.subplots(subplot_kw={"projection": "3d"})
     n_feat_list, n_tree_list = np.meshgrid(np.arange(*nfeat), np.arange(*ntree))
-    surf = ax.plot_surface(n_feat_list, n_tree_list, z, cmap=cm.coolwarm,
+    surf = ax.plot_surface(n_feat_list, n_tree_list, np.transpose(z), cmap=cm.coolwarm,
                            linewidth=0, antialiased=False)
     ax.set_zlim(np.min(z), np.max(z) * 1.05)
     ax.zaxis.set_major_locator(LinearLocator(10))
 
     fig.colorbar(surf, shrink=0.5, aspect=5)
+    plot.show()
+
+
+def view_importance(fim, loc, show_number=20):
+    import numpy as np
+    import matplotlib.pyplot as plot
+
+    amino_names = get_amino_loc(loc)
+    feature_importance = fim / fim.max()
+    sorted_idx = np.argsort(feature_importance)
+    bar_pos = np.arange(sorted_idx.shape[0]) + .5
+    plot.barh(bar_pos[-show_number:], feature_importance[sorted_idx][-show_number:], align='center')
+    plot.yticks(bar_pos[-show_number:], amino_names[sorted_idx][-show_number:])
+    plot.xlabel('Variable Importance')
     plot.show()
 
 
@@ -308,8 +330,12 @@ def get_data(ami_arr=12, norm=False):
     return train_data, train_label, test_loca_list
 
 
-def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val=False):
-    from sklearn import ensemble
+def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val_mode=False, r_state=2022):
+    """
+    val_mode를 킨 경우에는 z numpy 배열을 반환하고,
+    val_mode를 끈 경우네는 (min estimator, min feature), z를 반환한다.
+    """
+    from sklearn.ensemble import RandomForestRegressor
     from sklearn.metrics import mean_squared_error
     from sklearn.model_selection import train_test_split
 
@@ -318,25 +344,68 @@ def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val=False):
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=split_size)
     n_feat_list = np.arange(*nfeat)
     n_tree_list = np.arange(*ntree)
-    z = np.zeros((len(n_tree_list), len(n_feat_list)))
+    z = np.zeros((len(n_feat_list), len(n_tree_list)))
     for idx, maxFeat in enumerate(n_feat_list):
         for jdx, iTrees in enumerate(n_tree_list):
             depth = None
-            # maxFeat = 5 #조정해볼 것
-            wineRFModel = ensemble.RandomForestRegressor(n_estimators=iTrees,
-                                                         max_depth=depth, max_features=maxFeat,
-                                                         oob_score=False, n_jobs=-1)
-            wineRFModel.fit(x_train, y_train)
+            winerfmodel = RandomForestRegressor(n_estimators=iTrees, max_depth=depth,
+                                                max_features=maxFeat, oob_score=False, n_jobs=-1, random_state=r_state)
+            winerfmodel.fit(x_train, y_train)
             # 데이터 세트에 대한 MSE 누적
-            prediction = wineRFModel.predict(x_test)
-            z[jdx][idx] = mean_squared_error(y_test, prediction)
+            prediction = winerfmodel.predict(x_test)
+            z[idx][jdx] = mean_squared_error(y_test, prediction)
 
-    if val:
+    if val_mode:
         return z
     else:
-        from numpy import unravel_index
-        loc = unravel_index(z.argmin(), z.shape)
-        return n_feat_list[loc[1]], n_tree_list[loc[0]], z
+        return get_reg_value_loc(z, nfeat, ntree), z
+
+
+def get_reg_value_loc(z, nfeat, ntree):
+    from numpy import unravel_index
+
+    import numpy as np
+
+    n_feat_list, n_tree_list = np.arange(*nfeat), np.arange(*ntree)
+    arr_loc = unravel_index(z.argmin(), z.shape)
+    return n_feat_list[arr_loc[0]], n_tree_list[arr_loc[1]]
+
+
+def get_reg_importance(x, y, loc, feet, tree, split_size=0.3, val_mode=False, show_number=20):
+    """
+    val_mode를 킨 경우에는 get_amino_loc 함수를 이용해서 위치를 파악해야 한다
+    """
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import mean_squared_error
+    from sklearn.ensemble import RandomForestRegressor
+
+    import numpy as np
+
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=split_size)
+
+    regr = RandomForestRegressor(max_depth=feet, n_estimators=tree)
+    regr.fit(x_train, y_train)
+    prediction = regr.predict(x_test)
+    print(mean_squared_error(y_test, prediction))
+    feature_importance = regr.feature_importances_
+
+    if val_mode:
+        return feature_importance / feature_importance.max()
+    else:
+        import matplotlib.pyplot as plot
+
+        view_importance(feature_importance, loc, show_number)
+
+        plot.scatter(np.hstack((y_train, y_test)), np.hstack((regr.predict(x_train), regr.predict(x_test))),
+                     color=['orange'] * len(x_train) + ['blue'] * len(x_test))
+        plot.xlabel('True Values')
+        plot.ylabel('Predictions')
+        plot.axis('equal')
+        plot.axis('square')
+        plot.xlim([0, plot.xlim()[1]])
+        plot.ylim([0, plot.ylim()[1]])
+        _ = plot.plot([-100, 100], [-100, 100])
+        plot.show()
 
 
 if __name__ == "__main__":
