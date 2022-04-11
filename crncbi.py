@@ -15,4 +15,3 @@ for ind, val in enumerate(df_list):
     handle = Entrez.efetch(db='protein', id=val[2], rettype='gb', retmode='text')
     with open('Pdata/genprpt/' + str(ind) + '.gp', 'w') as f:
         f.write(handle.read())
-as
