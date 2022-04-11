@@ -16,3 +16,8 @@
 ## 4/10
 + Random Forest 실행
 + 데이터 추가 정리 (gap 관련)
+
+## 4/11
++ Pycharm에서 git 하기
+  + gpg에서 key 저장하기
+  + git config --global user.email (이메일) 설정
