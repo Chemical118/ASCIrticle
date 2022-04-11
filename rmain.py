@@ -1,8 +1,6 @@
-# from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn import ensemble
 from sklearn.metrics import mean_squared_error
-# import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 
@@ -23,6 +21,7 @@ nogap_dtot_list = list(filter(lambda t: t[1] > 12, nogap_dtot_list))  # 12개 �
 test_loca_list = list(map(lambda t: [t[0]], nogap_dtot_list))  # [[아미노산의 위치, motif 서열].. ]
 # 원하는 값에 대해서 최대 최소 찾기
 tar = 3
+# check
 data.sort(key=lambda t: -t[1][tar])
 # data = data[1:]
 shuffle(data)
