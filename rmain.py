@@ -16,7 +16,8 @@ data = data_list()
 pro = pros[0]
 
 dtot_list = list(zip(pros[1], pros[2]))  # dtot_list : [(아미노산 위치, mutation 개수).. ]
-nogap_dtot_list = list(filter(lambda t: '-' not in pro[t[0]][1].keys(), dtot_list))  # gap이 없는 위치만 표시
+nogap_dtot_list = list(filter(lambda t: '-' not in pro[t[0]][1].keys() or 'X' not in pro[t[0]][1].keys(), dtot_list))
+# gap또는 X가 없는 위치만 표시
 nogap_dtot_list = list(filter(lambda t: t[1] > 12, nogap_dtot_list))  # 12개 이상의 mutaion을 가지는 dtot_list
 test_loca_list = list(map(lambda t: [t[0]], nogap_dtot_list))  # [[아미노산의 위치, motif 서열].. ]
 # 원하는 값에 대해서 최대 최소 찾기
