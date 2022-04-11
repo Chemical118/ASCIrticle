@@ -1,19 +1,19 @@
-LOCUS       XP_030324024             469 aa            linear   VRT 20-AUG-2019
-DEFINITION  citrate synthase, mitochondrial [Calypte anna].
-ACCESSION   XP_030324024
-VERSION     XP_030324024.1
-DBLINK      BioProject: PRJNA558503
-DBSOURCE    REFSEQ: accession XM_030468164.1
+LOCUS       XP_046760974             468 aa            linear   VRT 01-MAR-2022
+DEFINITION  citrate synthase, mitochondrial isoform X4 [Gallus gallus].
+ACCESSION   XP_046760974
+VERSION     XP_046760974.1
+DBLINK      BioProject: PRJNA698609
+DBSOURCE    REFSEQ: accession XM_046905018.1
 KEYWORDS    RefSeq.
-SOURCE      Calypte anna (Anna's hummingbird)
-  ORGANISM  Calypte anna
+SOURCE      Gallus gallus (chicken)
+  ORGANISM  Gallus gallus
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
             Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
-            Coelurosauria; Aves; Neognathae; Caprimulgimorphae; Apodiformes;
-            Trochilidae; Calypte.
+            Coelurosauria; Aves; Neognathae; Galloanserae; Galliformes;
+            Phasianidae; Phasianinae; Gallus.
 COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
             analysis. This record is derived from a genomic sequence
-            (NC_044275.1) annotated using gene prediction method: Gnomon,
+            (NC_052565.1) annotated using gene prediction method: Gnomon,
             supported by EST evidence.
             Also see:
                 Documentation of NCBI's Annotation Process
@@ -21,63 +21,43 @@ COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
             ##Genome-Annotation-Data-START##
             Annotation Provider         :: NCBI
             Annotation Status           :: Full annotation
-            Annotation Name             :: Calypte anna Annotation Release 101
-            Annotation Version          :: 101
+            Annotation Name             :: Gallus gallus Annotation Release 106
+            Annotation Version          :: 106
             Annotation Pipeline         :: NCBI eukaryotic genome annotation
                                            pipeline
-            Annotation Software Version :: 8.2
+            Annotation Software Version :: 9.0
             Annotation Method           :: Best-placed RefSeq; Gnomon
             Features Annotated          :: Gene; mRNA; CDS; ncRNA
             ##Genome-Annotation-Data-END##
             COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
-     source          1..469
-                     /organism="Calypte anna"
-                     /isolate="BGI_N300"
-                     /db_xref="taxon:9244"
-                     /chromosome="33"
+     source          1..468
+                     /organism="Gallus gallus"
+                     /isolate="bGalGal1"
+                     /db_xref="taxon:9031"
+                     /chromosome="34"
                      /sex="female"
-                     /country="USA"
-     Protein         1..469
-                     /product="citrate synthase, mitochondrial"
-                     /calculated_mol_wt=51967
-     Region          36..463
-                     /region_name="ScCit1-2_like"
-                     /note="Saccharomyces cerevisiae (Sc) citrate synthases
-                     Cit1-2_like. Citrate synthases (CS) catalyzes the
-                     condensation of acetyl coenzyme A (AcCoA) with
-                     oxaloacetate (OAA) to form citrate and coenzyme A (CoA),
-                     the first step in the citric acid cycle (TCA or...;
-                     cd06105"
-                     /db_xref="CDD:99858"
-     Site            order(268,272,304,350..351,359,431,451)
-                     /site_type="other"
-                     /note="oxalacetate binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(268,272,303..304,344..345,347..351,359,403,431)
-                     /site_type="other"
-                     /note="citrylCoA binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(302..304,307,310,344..351,400,403,405,448)
-                     /site_type="other"
-                     /note="coenzyme A binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(304,350,405)
-                     /site_type="active"
-                     /note="catalytic triad [active]"
-                     /db_xref="CDD:99858"
-     CDS             1..469
+                     /tissue_type="blood"
+                     /country="USA: Fayetteville"
+                     /lat_lon="36.0822 N 94.1719 W"
+                     /collection_date="20-May-2019"
+                     /collected_by="Nick Anthony"
+     Protein         1..468
+                     /product="citrate synthase, mitochondrial isoform X4"
+                     /calculated_mol_wt=52082
+     CDS             1..468
                      /gene="CS"
-                     /coded_by="XM_030468164.1:104..1513"
-                     /db_xref="GeneID:103533014"
+                     /coded_by="XM_046905018.1:870..2276"
+                     /db_xref="GeneID:100858903"
+                     /db_xref="CGNC:64209"
 ORIGIN      
-        1 mtllaagtra aarlrgpkna pcvlfaarha savtnlkdvl vnmipkeqak iksfrqqhgs
-       61 ttigqitvdm vyggmrgmkg liyetsvldp degirfrgfs ipecqkllpk aaggeeplpe
-      121 glfwllvtge vptqeqvnwl srewarraal pshvvtmldn fptnlhpmsq lsaaitalns
-      181 eskfarayae gihrakywef vyedamdlia klpcvaakiy rnlyregssi gaidpnldws
-      241 hnftnmlgyt dpqfielmrl yltihsdheg gnvsahtshl vgsalsdpyl afaaamngla
-      301 gplhglanqe vlvwltdlqk elggevsdek lrdfiwntlk sgrvvpgygh avlrktdpry
-      361 tcqrefalkh lpqdplfklv aqlykivpnv lleqgkaknp wpnvdahsgv llqyygmkem
-      421 nyytvlfgvs ralgvlsqli wsralgfple rpksmstkgl mqlvgyksg
+        1 mipkeqarik sfrqqhgsta igqitvdmvy ggmrgmkgli yetsvldpde girfrgfsip
+       61 ecqkllpkaa ggeeplpegl fwllvtgevp tpeqvswvsr ewakraalps hvvtmldnfp
+      121 tnlhpmsqls aaitalnses kfarayaegi nrvkywefvy edamdliakl pcvaakiyrn
+      181 lyregssiga idpnldwshn ftnmlgytdp qfielmrlyl tihsdheggn vsahtshlvg
+      241 salsdpylaf aaamnglagp lhglanqevl lwltdlqkel gqdvsdeklr dfiwntlnsg
+      301 rvvpgyghav lrktdprytc qrefalkhlp kdpmfklvaq lykivpnvll eqgkaknpwp
+      361 nvdahsgvll qyygmkemky ytvlfgvsra lgvlsqliws ralgfplerp ksmstaglmq
+      421 lvgyksgrir pgspasehqp ssspgqaelt reflqhgrrs wsplalqs
 //
 

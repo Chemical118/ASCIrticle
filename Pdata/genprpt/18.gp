@@ -1,32 +1,32 @@
-LOCUS       AF461496_1               466 aa            linear   ROD 21-JAN-2002
-DEFINITION  citrate synthase [Rattus norvegicus].
-ACCESSION   AAL66372
-VERSION     AAL66372.1
-DBSOURCE    accession AF461496.1
+LOCUS       AAA31017                 464 aa            linear   MAM 27-APR-1993
+DEFINITION  citrate synthase precursor (EC 4.1.3.7) [Sus scrofa].
+ACCESSION   AAA31017
+VERSION     AAA31017.1
+DBSOURCE    locus PIGCITSYN accession M21197.1
 KEYWORDS    .
-SOURCE      Rattus norvegicus (Norway rat)
-  ORGANISM  Rattus norvegicus
+SOURCE      Sus scrofa (pig)
+  ORGANISM  Sus scrofa
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
-            Mammalia; Eutheria; Euarchontoglires; Glires; Rodentia; Myomorpha;
-            Muroidea; Muridae; Murinae; Rattus.
-REFERENCE   1  (residues 1 to 466)
-  AUTHORS   Rossignol,F., Jouaville,L., Mounier,R. and Clottes,E.
-  TITLE     Rattus norvegicus citrate synthase cDNA
-  JOURNAL   Unpublished
-REFERENCE   2  (residues 1 to 466)
-  AUTHORS   Rossignol,F., Jouaville,L., Mounier,R. and Clottes,E.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (20-DEC-2001) Physiologie du Sport, Universite
-            d'Auvergne, 24 Place Henri Dunant, Clermont-Ferrand 63000, France
-COMMENT     Method: conceptual translation supplied by author.
+            Mammalia; Eutheria; Laurasiatheria; Artiodactyla; Suina; Suidae;
+            Sus.
+REFERENCE   1  (residues 1 to 464)
+  AUTHORS   Evans,C.T., Owens,D.D., Sumegi,B., Kispal,G. and Srere,P.A.
+  TITLE     Isolation, nucleotide sequence, and expression of a cDNA encoding
+            pig citrate synthase
+  JOURNAL   Biochemistry 27 (13), 4680-4686 (1988)
+   PUBMED   3048387
+COMMENT     Method: conceptual translation.
 FEATURES             Location/Qualifiers
-     source          1..466
-                     /organism="Rattus norvegicus"
-                     /db_xref="taxon:10116"
-                     /tissue_type="testis"
-     Protein         1..466
+     source          1..464
+                     /organism="Sus scrofa"
+                     /db_xref="taxon:9823"
+     Protein         1..464
+                     /name="citrate synthase precursor (EC 4.1.3.7)"
+     sig_peptide     1..28
+                     /note="citrate synthase signal peptide"
+     mat_peptide     28..464
                      /product="citrate synthase"
-     Region          33..459
+     Region          33..460
                      /region_name="ScCit1-2_like"
                      /note="Saccharomyces cerevisiae (Sc) citrate synthases
                      Cit1-2_like. Citrate synthases (CS) catalyzes the
@@ -51,16 +51,16 @@ FEATURES             Location/Qualifiers
                      /site_type="active"
                      /note="catalytic triad [active]"
                      /db_xref="CDD:99858"
-     CDS             1..466
-                     /coded_by="AF461496.1:72..1472"
+     CDS             1..464
+                     /coded_by="M21197.1:7..1401"
 ORIGIN      
-        1 malltaaarl lgaknssclv laarhasass tnlkdilsnl ipkeqarvkt frqqhgktvv
-       61 gqitvdmmyg gmrgmkglvy etsvldpdeg irfrgysipe cqkllpkakg geeplpeglf
-      121 wllvtgqmpt eeqvswlsqe wakraalpsh vvtmldnfpt nlhpmsqlsa aitalnsesn
-      181 farayaegin rtkyweliye dcmdliaklp cvaakiyrnl yregssigai dskldwshnf
-      241 tnmlcytepq ftelmrlylt ihsdhdggnv sahtshlvgs alsdtylsfa aamnglagpl
-      301 hglanqevlv wltqlqkevg kdvsdeklrd yiwntlnsgr vvpgyghavl rktdpryscq
-      361 refalkhlpk dpmfklvaql ykivpnille qgkaknpwpn vdahsgvllq yygmtemnyy
-      421 tvlfgvsral gvlaqliwsr algfplerpk smstdglmkf vdsksg
+        1 malltaaarl fgaknasclv laarhasass tnlkdiladl ipkeqarikt frqqhgntvv
+       61 gqitvdmmyg gmrgmkglvy etsvldpdeg irfrgysipe cqkmlpkakg geeplpeglf
+      121 wllvtgqipt eeqvswlske wakraalpsh vvtmldnfpt nlhpmsqlsa aitalnsesn
+      181 farayaegih rtkyweliye dcmdliaklp cvaakiyrnl yregssigai dskldwshnf
+      241 tnmlgytdaq ftelmrlylt ihsdheggnv sahtshlvgs alsdpylsfa aamnglagpl
+      301 hglanqevlv wltqlqkevg kdvsdeklrd yiwntlnsgr vvpgyghavl rktdprytcq
+      361 refalkhlph dpmfklvaql ykivpnvlle qgkaknpwpn vdahsgvllq yygmtemnyy
+      421 tvlfgvsral gvlaqliwsr algfplerpk smstdglikl vdsk
 //
 

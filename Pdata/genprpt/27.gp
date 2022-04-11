@@ -1,80 +1,82 @@
-LOCUS       XP_040197062             468 aa            linear   VRT 25-MAR-2021
-DEFINITION  citrate synthase, mitochondrial [Rana temporaria].
-ACCESSION   XP_040197062
-VERSION     XP_040197062.1
-DBLINK      BioProject: PRJNA714106
-DBSOURCE    REFSEQ: accession XM_040341128.1
+LOCUS       XP_014813383             264 aa            linear   VRT 09-DEC-2015
+DEFINITION  PREDICTED: citrate synthase, mitochondrial [Calidris pugnax].
+ACCESSION   XP_014813383
+VERSION     XP_014813383.1
+DBLINK      BioProject: PRJNA305421
+DBSOURCE    REFSEQ: accession XM_014957897.1
 KEYWORDS    RefSeq.
-SOURCE      Rana temporaria (common frog)
-  ORGANISM  Rana temporaria
+SOURCE      Calidris pugnax (ruff)
+  ORGANISM  Calidris pugnax
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
-            Amphibia; Batrachia; Anura; Neobatrachia; Ranoidea; Ranidae; Rana;
-            Rana.
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Charadriiformes; Scolopacidae;
+            Calidris.
 COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
             analysis. This record is derived from a genomic sequence
-            (NC_053490.1) annotated using gene prediction method: Gnomon,
-            supported by EST evidence.
+            (NW_015091093.1) annotated using gene prediction method: Gnomon,
+            supported by mRNA and EST evidence.
             Also see:
                 Documentation of NCBI's Annotation Process
             
             ##Genome-Annotation-Data-START##
             Annotation Provider         :: NCBI
             Annotation Status           :: Full annotation
-            Annotation Name             :: Rana temporaria Annotation Release
+            Annotation Version          :: Calidris pugnax Annotation Release
                                            100
-            Annotation Version          :: 100
             Annotation Pipeline         :: NCBI eukaryotic genome annotation
                                            pipeline
-            Annotation Software Version :: 8.6
+            Annotation Software Version :: 6.5
             Annotation Method           :: Best-placed RefSeq; Gnomon
             Features Annotated          :: Gene; mRNA; CDS; ncRNA
             ##Genome-Annotation-Data-END##
             COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
-     source          1..468
-                     /organism="Rana temporaria"
-                     /db_xref="taxon:8407"
-                     /chromosome="2"
-     Protein         1..468
+     source          1..264
+                     /organism="Calidris pugnax"
+                     /isolate="Ruff"
+                     /db_xref="taxon:198806"
+                     /chromosome="Unknown"
+     Protein         1..264
                      /product="citrate synthase, mitochondrial"
-                     /calculated_mol_wt=51790
-     Region          35..462
-                     /region_name="ScCit1-2_like"
-                     /note="Saccharomyces cerevisiae (Sc) citrate synthases
-                     Cit1-2_like. Citrate synthases (CS) catalyzes the
-                     condensation of acetyl coenzyme A (AcCoA) with
-                     oxaloacetate (OAA) to form citrate and coenzyme A (CoA),
-                     the first step in the citric acid cycle (TCA or...;
-                     cd06105"
-                     /db_xref="CDD:99858"
-     Site            order(267,271,303,349..350,358,430,450)
+                     /calculated_mol_wt=29387
+     Region          <1..258
+                     /region_name="CS_ACL-C_CCL"
+                     /note="Citrate synthase (CS), citryl-CoA lyase (CCL), the
+                     C-terminal portion of the single-subunit type ATP-citrate
+                     lyase (ACL) and the C-terminal portion of the large
+                     subunit of the two-subunit type ACL. CS catalyzes the
+                     condensation of acetyl coenzyme A; cl00416"
+                     /db_xref="CDD:412368"
+     Site            order(63,67,97..100,102,105,139..146,149,154,195,198,200,
+                     222,226,243,246)
+                     /site_type="active"
+                     /db_xref="CDD:99853"
+     Site            order(63,67,99..100,145..146,154,200,222,226,246)
                      /site_type="other"
-                     /note="oxalacetate binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(267,271,302..303,343..344,346..350,358,402,430)
+                     /note="oxalacetate/citrate binding site [chemical
+                     binding]"
+                     /db_xref="CDD:99853"
+     Site            order(63,67,98..99,139..140,142..146,154,198,226)
                      /site_type="other"
                      /note="citrylCoA binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(301..303,306,309,343..350,399,402,404,447)
+                     /db_xref="CDD:99853"
+     Site            order(97..99,102,105,139..146,149,195,198,200,243)
                      /site_type="other"
                      /note="coenzyme A binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(303,349,404)
+                     /db_xref="CDD:99853"
+     Site            order(99,145,200)
                      /site_type="active"
                      /note="catalytic triad [active]"
-                     /db_xref="CDD:99858"
-     CDS             1..468
+                     /db_xref="CDD:99853"
+     CDS             1..264
                      /gene="CS"
-                     /coded_by="XM_040341128.1:172..1578"
-                     /db_xref="GeneID:120929550"
+                     /coded_by="XM_014957897.1:47..841"
+                     /db_xref="GeneID:106897314"
 ORIGIN      
-        1 mslitagrlc arilgaknsp cvliaarqas sstnlkdvls dlipkeqtrv knfrqqygnt
-       61 vigqitvdmv yggmrgmkgl vyetsvldpd egirfrgysi pecqkllpka pggeeplpeg
-      121 lfwllvtgev psqeqvnwis kewakraalp shvvtmldnf ptnlhpmsqf saaitalnse
-      181 snfarayaeg vhrtkyweli yedsmdliak lpciaakiyr nlyregssig aidsnldwsh
-      241 nftnmlgytd aqftelmrly ltihsdhegg nvsahtshlv gsalsdpyls fsaamnglag
-      301 plhglanqev lvwltalqkd lggevsdgql kdyiwntlns grvvpgygha vlrktdprym
-      361 cqrefalkhl pndpmfklva qlykivpdvl leqgkaknpw pnvdahsgvl lqyygmkemn
-      421 yytvlfgvsr algvlsqliw sralgfpler pksmstdglm qlvkaksg
+        1 mdliaklpcv aakiyrnlyr egssigaidp nldwshnftn mlgytdpqfi elmrlyltih
+       61 sdheggnvsa htshlvgsal sdpylafaaa mnglagplhg lanqevllwl tdlqkelgqe
+      121 vsdeklrdfi wntlnsgrvv pgyghavlrk tdprytcqre falkhlpkdp lfklvaqlyk
+      181 ivpnvlleqg kaknpwpnvd ahsgvllqyy gmkemnyytv lfgvsralgv lsqliwsral
+      241 gfplerpksm stkglmqlvg yksg
 //
 

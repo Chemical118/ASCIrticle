@@ -12,3 +12,15 @@ toolbox.py : having useful function
 + get_colors, view_alignment : Using [Bokeh sequence aligner visualization program](https://dmnfarrell.github.io/bioinformatics/bokeh-sequence-aligner
 ), make protein sequence aligner
 + get_id_list : return data id list
+
+***
+## Import module
++ Biopython
++ numpy
++ bokek
++ pandas
++ bidict
++ selenium
+  + fake_useragent
+  + webdriver_manager
++ dendropy

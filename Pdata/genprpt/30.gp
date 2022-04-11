@@ -1,49 +1,47 @@
-LOCUS       XP_017342999             468 aa            linear   VRT 23-MAR-2022
-DEFINITION  citrate synthase, mitochondrial [Ictalurus punctatus].
-ACCESSION   XP_017342999
-VERSION     XP_017342999.1
-DBLINK      BioProject: PRJNA327588
-DBSOURCE    REFSEQ: accession XM_017487510.2
+LOCUS       XP_031465919             470 aa            linear   VRT 16-NOV-2019
+DEFINITION  citrate synthase, mitochondrial isoform X2 [Phasianus colchicus].
+ACCESSION   XP_031465919
+VERSION     XP_031465919.1
+DBLINK      BioProject: PRJNA589599
+DBSOURCE    REFSEQ: accession XM_031610059.1
 KEYWORDS    RefSeq.
-SOURCE      Ictalurus punctatus (channel catfish)
-  ORGANISM  Ictalurus punctatus
+SOURCE      Phasianus colchicus (Ring-necked pheasant)
+  ORGANISM  Phasianus colchicus
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
-            Actinopterygii; Neopterygii; Teleostei; Ostariophysi; Siluriformes;
-            Ictaluridae; Ictalurus.
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Galloanserae; Galliformes;
+            Phasianidae; Phasianinae; Phasianus.
 COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
             analysis. This record is derived from a genomic sequence
-            (NC_030430.1) annotated using gene prediction method: Gnomon,
-            supported by EST evidence.
+            (NW_022207130.1) annotated using gene prediction method: Gnomon.
             Also see:
                 Documentation of NCBI's Annotation Process
             
             ##Genome-Annotation-Data-START##
             Annotation Provider         :: NCBI
             Annotation Status           :: Full annotation
-            Annotation Name             :: Ictalurus punctatus Annotation
-                                           Release 101
-            Annotation Version          :: 101
+            Annotation Name             :: Phasianus colchicus Annotation
+                                           Release 100
+            Annotation Version          :: 100
             Annotation Pipeline         :: NCBI eukaryotic genome annotation
                                            pipeline
-            Annotation Software Version :: 9.0
+            Annotation Software Version :: 8.2
             Annotation Method           :: Best-placed RefSeq; Gnomon
             Features Annotated          :: Gene; mRNA; CDS; ncRNA
             ##Genome-Annotation-Data-END##
             COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
-     source          1..468
-                     /organism="Ictalurus punctatus"
-                     /db_xref="taxon:7998"
-                     /chromosome="15"
-                     /sex="female"
+     source          1..470
+                     /organism="Phasianus colchicus"
+                     /isolate="SZU-A5-319"
+                     /db_xref="taxon:9054"
+                     /chromosome="Unknown"
+                     /sex="male"
                      /tissue_type="blood"
-                     /dev_stage="adult"
-                     /breed="USDA103"
-                     /note="double haploid"
-     Protein         1..468
-                     /product="citrate synthase, mitochondrial"
-                     /calculated_mol_wt=51865
-     Region          35..462
+     Protein         1..470
+                     /product="citrate synthase, mitochondrial isoform X2"
+                     /calculated_mol_wt=51890
+     Region          37..464
                      /region_name="ScCit1-2_like"
                      /note="Saccharomyces cerevisiae (Sc) citrate synthases
                      Cit1-2_like. Citrate synthases (CS) catalyzes the
@@ -52,34 +50,34 @@ FEATURES             Location/Qualifiers
                      the first step in the citric acid cycle (TCA or...;
                      cd06105"
                      /db_xref="CDD:99858"
-     Site            order(267,271,303,349..350,358,430,450)
+     Site            order(269,273,305,351..352,360,432,452)
                      /site_type="other"
                      /note="oxalacetate binding site [chemical binding]"
                      /db_xref="CDD:99858"
-     Site            order(267,271,302..303,343..344,346..350,358,402,430)
+     Site            order(269,273,304..305,345..346,348..352,360,404,432)
                      /site_type="other"
                      /note="citrylCoA binding site [chemical binding]"
                      /db_xref="CDD:99858"
-     Site            order(301..303,306,309,343..350,399,402,404,447)
+     Site            order(303..305,308,311,345..352,401,404,406,449)
                      /site_type="other"
                      /note="coenzyme A binding site [chemical binding]"
                      /db_xref="CDD:99858"
-     Site            order(303,349,404)
+     Site            order(305,351,406)
                      /site_type="active"
                      /note="catalytic triad [active]"
                      /db_xref="CDD:99858"
-     CDS             1..468
-                     /gene="cs"
-                     /coded_by="XM_017487510.2:151..1557"
-                     /db_xref="GeneID:108276119"
+     CDS             1..470
+                     /gene="CS"
+                     /coded_by="XM_031610059.1:35..1447"
+                     /db_xref="GeneID:116239825"
 ORIGIN      
-        1 mslltisrls hrllcsknaa gvvvsarnva astnlkdvla dlipkeqtri knfkqqygkt
-       61 nigqitvdmv yggmrgmkgl vyetsvldpd egirfrgysi pecqqllpka aggeeplpeg
-      121 lfwllvtgqv pteeqvnwls kewakraalp shvvtmldnf ptnlhpmsqf saaitalnse
-      181 ssfarayseg vhkskywefv yedsmdlisk lpcvaakiyr nlyregssig aidsnldwsh
-      241 nftnmlgynd pqftelmrly ltihsdhegg nvsahtshlv gsalsdpyls fgaamnglag
-      301 plhglanqev lvwltalqke lggevsdekm rdyiwntlks grvvpgygha vlrktdpryt
-      361 cqrefalkhl pndpmfklva qlykivpnvl leqgkaknpw pnvdahsgvl lqyygmtemn
-      421 yytvlfgvsr algvlaqliw sralgfpler pksmstdglm aliratsa
+        1 mtllaagsra aarlrgpkna pcvlfaarha ataatnlkdv lasmipkeqa riksfrqqhg
+       61 staigqitvd mvyggmrgmk gliyetsvld pdegirfrgf sipecqkllp kaaggeeplp
+      121 eglfwllvtg evptpeqvsw vsrewakraa lpshvvtmld nfptnlhpms qlsaaitaln
+      181 seskfaraya eginrvkywe fvyedamdli aklpcvaaki yrnlyregss igaidpnldw
+      241 shnftnmlgy tdpqfielmr lyltihsdhe ggnvsahtsh lvgsalsdpy lafaaamngl
+      301 agplhglanq evllwltdlq kelgqdvsde klrdfiwntl nsgrvvpgyg havlrktdpr
+      361 ytcqrefalk hlpkdpmfkl vaqlykivpn vlleqgkakn pwpnvdahsg vllqyygmke
+      421 mkyytvlfgv sralgvlsql iwsralgfpl erpksmstag lmqlvgyksg
 //
 

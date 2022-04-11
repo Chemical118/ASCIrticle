@@ -4,7 +4,7 @@ from Bio.Seq import Seq
 from toolbox import get_id_list
 from bidict import bidict
 
-import dendropy as d
+import dendropy as de
 import numpy as np
 
 id_list = get_id_list()
@@ -17,10 +17,10 @@ for ind, val in enumerate(id_list):
 for i in SeqIO.parse('Data/ealgpdata.fasta', 'fasta'):
     sdict[i.id] = str(i.seq)
 
-tree = d.Tree.get_from_path('Data/Mega/ealtreedata.nwk', 'newick')
+tree = de.Tree.get_from_path('Data/Mega/ealtreedata.nwk', 'newick')
 pdm = treemeasure.PatristicDistanceMatrix(tree)
 
-dmat = np.full((len(id_list), len(id_list)), 10)
+dmat = np.full((len(id_list), len(id_list)), 10.0, dtype='float64')
 for i, t1 in enumerate(tree.taxon_namespace):
     for t2 in tree.taxon_namespace[i + 1:]:
         t1l = t1.label.replace(' ', '_')
@@ -38,6 +38,7 @@ for i in SeqIO.parse('Data/ealgpdata.fasta', 'fasta'):
     nd = rloc_list[-1] + 1
     if st != 0 or nd != ls:
         clos_tar = bdict.inverse[np.argmin(dmat[bdict[i.id]])]
+        print(i.id, clos_tar)
         if st != 0:
             str_seq = sdict[clos_tar][:st] + str_seq[st:]
         if nd != ls:

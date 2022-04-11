@@ -1,69 +1,84 @@
-LOCUS       ABD77263                 224 aa            linear   MAM 26-JUL-2016
-DEFINITION  citrate synthase, partial [Oryctolagus cuniculus].
-ACCESSION   ABD77263
-VERSION     ABD77263.1
-DBSOURCE    accession DQ403130.1
-KEYWORDS    .
-SOURCE      Oryctolagus cuniculus (rabbit)
-  ORGANISM  Oryctolagus cuniculus
+LOCUS       XP_010837550             472 aa            linear   MAM 31-DEC-2014
+DEFINITION  PREDICTED: citrate synthase, mitochondrial isoform X1 [Bison bison
+            bison].
+ACCESSION   XP_010837550
+VERSION     XP_010837550.1
+DBLINK      BioProject: PRJNA266339
+DBSOURCE    REFSEQ: accession XM_010839248.1
+KEYWORDS    RefSeq.
+SOURCE      Bison bison bison
+  ORGANISM  Bison bison bison
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
-            Mammalia; Eutheria; Euarchontoglires; Glires; Lagomorpha;
-            Leporidae; Oryctolagus.
-REFERENCE   1  (residues 1 to 224)
-  AUTHORS   Kullberg,M., Nilsson,M.A., Arnason,U., Harley,E.H. and Janke,A.
-  TITLE     Housekeeping genes for phylogenetic analysis of eutherian
-            relationships
-  JOURNAL   Mol. Biol. Evol. 23 (8), 1493-1503 (2006)
-   PUBMED   16751257
-REFERENCE   2  (residues 1 to 224)
-  AUTHORS   Kullberg,M.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (16-FEB-2006) Department of Cell and Organism Biology,
-            Lund University, Solvegatan 29, Lund S-223 62, Sweden
-COMMENT     Method: conceptual translation.
+            Mammalia; Eutheria; Laurasiatheria; Artiodactyla; Ruminantia;
+            Pecora; Bovidae; Bovinae; Bison.
+COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
+            analysis. This record is derived from a genomic sequence
+            (NW_011494687.1) annotated using gene prediction method: Gnomon,
+            supported by mRNA and EST evidence.
+            Also see:
+                Documentation of NCBI's Annotation Process
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Version          :: Bison bison bison Annotation Release
+                                           100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 6.2
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+            COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
-     source          1..224
-                     /organism="Oryctolagus cuniculus"
-                     /db_xref="taxon:9986"
-                     /tissue_type="liver"
-     Protein         <1..>224
-                     /product="citrate synthase"
-     Region          <2..224
-                     /region_name="CS_ACL-C_CCL"
-                     /note="Citrate synthase (CS), citryl-CoA lyase (CCL), the
-                     C-terminal portion of the single-subunit type ATP-citrate
-                     lyase (ACL) and the C-terminal portion of the large
-                     subunit of the two-subunit type ACL. CS catalyzes the
-                     condensation of acetyl coenzyme A; cl00416"
-                     /db_xref="CDD:412368"
-     Site            order(43,47,77..80,82,85,119..126,129,134,175,178,180,202,
-                     206,223)
-                     /site_type="active"
-                     /db_xref="CDD:99853"
-     Site            order(43,47,78..79,119..120,122..126,134,178,206)
+     source          1..472
+                     /organism="Bison bison bison"
+                     /isolate="TAMUID 2011002044"
+                     /sub_species="bison"
+                     /db_xref="taxon:43346"
+                     /chromosome="Unknown"
+                     /sex="male"
+                     /tissue_type="blood"
+     Protein         1..472
+                     /product="citrate synthase, mitochondrial isoform X1"
+                     /calculated_mol_wt=52612
+     Region          39..465
+                     /region_name="ScCit1-2_like"
+                     /note="Saccharomyces cerevisiae (Sc) citrate synthases
+                     Cit1-2_like. Citrate synthases (CS) catalyzes the
+                     condensation of acetyl coenzyme A (AcCoA) with
+                     oxaloacetate (OAA) to form citrate and coenzyme A (CoA),
+                     the first step in the citric acid cycle (TCA or...;
+                     cd06105"
+                     /db_xref="CDD:99858"
+     Site            order(271,275,307,353..354,362,434,454)
+                     /site_type="other"
+                     /note="oxalacetate binding site [chemical binding]"
+                     /db_xref="CDD:99858"
+     Site            order(271,275,306..307,347..348,350..354,362,406,434)
                      /site_type="other"
                      /note="citrylCoA binding site [chemical binding]"
-                     /db_xref="CDD:99853"
-     Site            order(43,47,79..80,125..126,134,180,202,206)
-                     /site_type="other"
-                     /note="oxalacetate/citrate binding site [chemical
-                     binding]"
-                     /db_xref="CDD:99853"
-     Site            order(77..79,82,85,119..126,129,175,178,180,223)
+                     /db_xref="CDD:99858"
+     Site            order(305..307,310,313,347..354,403,406,408,451)
                      /site_type="other"
                      /note="coenzyme A binding site [chemical binding]"
-                     /db_xref="CDD:99853"
-     Site            order(79,125,180)
+                     /db_xref="CDD:99858"
+     Site            order(307,353,408)
                      /site_type="active"
                      /note="catalytic triad [active]"
-                     /db_xref="CDD:99853"
-     CDS             1..224
+                     /db_xref="CDD:99858"
+     CDS             1..472
                      /gene="CS"
-                     /coded_by="DQ403130.1:<1..>672"
+                     /coded_by="XM_010839248.1:415..1833"
+                     /db_xref="GeneID:104988078"
 ORIGIN      
-        1 egssigaids kldwshnftn mlgytdaqft elmrlyltih sdheggnvsa htshlvgsal
-       61 sdpylsfaaa mnglagplhg lanqevlvwl tqlqkevgkd vsdeklrdyi wntlnsgrvv
-      121 pgyghavlrk tdprytcqre falkhlpddp lfklvaqlyk ivpnilleqg kaknpwpnvd
-      181 ahsgvllqyy gmtemnyytv lfgvsralgv laqliwsral gfpl
+        1 mhctkpfssf hwqpggrrde nasclvlaar hasasstnlk diladlipke qtrvkafrqq
+       61 hgktvvgqit vdmmyggmrg mkglvyetsv ldpdegirfr gysipecqkl lpkakggeep
+      121 lpeglfwllv tgqipteeqv swlsqewakr aalpshvvtm ldnfptnlhp msqlsaavta
+      181 lnsestfara yseginrtky weliyedsmd liaklpcvaa kiyrnlyreg ssigaidpkl
+      241 dwshnftnml gytdaqftel mrlyltihsd heggnvsaht shlvgsalsd pylsfaaamn
+      301 glagplhgla nqevlvwltq lqkevgkdvs deklrdyiwn tlnsgrvvpg yghavlrktd
+      361 prytcqrefa lkhlpqdpmf klvaqlykiv pnilleqgka knpwpnvdah sgvllqyygm
+      421 temnyytvlf gvsralgvla qliwsralgf plerpksmst dglmkfvdsk sg
 //
 

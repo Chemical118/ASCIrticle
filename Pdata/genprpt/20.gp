@@ -1,46 +1,31 @@
-LOCUS       XP_006741075             466 aa            linear   MAM 30-SEP-2019
-DEFINITION  citrate synthase, mitochondrial [Leptonychotes weddellii].
-ACCESSION   XP_006741075
-VERSION     XP_006741075.1
-DBLINK      BioProject: PRJNA232772
-DBSOURCE    REFSEQ: accession XM_006741012.2
-KEYWORDS    RefSeq.
-SOURCE      Leptonychotes weddellii (Weddell seal)
-  ORGANISM  Leptonychotes weddellii
+LOCUS       AF461496_1               466 aa            linear   ROD 21-JAN-2002
+DEFINITION  citrate synthase [Rattus norvegicus].
+ACCESSION   AAL66372
+VERSION     AAL66372.1
+DBSOURCE    accession AF461496.1
+KEYWORDS    .
+SOURCE      Rattus norvegicus (Norway rat)
+  ORGANISM  Rattus norvegicus
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
-            Mammalia; Eutheria; Laurasiatheria; Carnivora; Caniformia;
-            Phocidae; Leptonychotes.
-COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
-            analysis. This record is derived from a genomic sequence
-            (NW_006384316.1) annotated using gene prediction method: Gnomon,
-            supported by mRNA and EST evidence.
-            Also see:
-                Documentation of NCBI's Annotation Process
-            
-            ##Genome-Annotation-Data-START##
-            Annotation Provider         :: NCBI
-            Annotation Status           :: Full annotation
-            Annotation Name             :: Leptonychotes weddellii Annotation
-                                           Release 101
-            Annotation Version          :: 101
-            Annotation Pipeline         :: NCBI eukaryotic genome annotation
-                                           pipeline
-            Annotation Software Version :: 8.2
-            Annotation Method           :: Best-placed RefSeq; Gnomon
-            Features Annotated          :: Gene; mRNA; CDS; ncRNA
-            ##Genome-Annotation-Data-END##
-            COMPLETENESS: full length.
+            Mammalia; Eutheria; Euarchontoglires; Glires; Rodentia; Myomorpha;
+            Muroidea; Muridae; Murinae; Rattus.
+REFERENCE   1  (residues 1 to 466)
+  AUTHORS   Rossignol,F., Jouaville,L., Mounier,R. and Clottes,E.
+  TITLE     Rattus norvegicus citrate synthase cDNA
+  JOURNAL   Unpublished
+REFERENCE   2  (residues 1 to 466)
+  AUTHORS   Rossignol,F., Jouaville,L., Mounier,R. and Clottes,E.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (20-DEC-2001) Physiologie du Sport, Universite
+            d'Auvergne, 24 Place Henri Dunant, Clermont-Ferrand 63000, France
+COMMENT     Method: conceptual translation supplied by author.
 FEATURES             Location/Qualifiers
      source          1..466
-                     /organism="Leptonychotes weddellii"
-                     /isolate="WS11-02"
-                     /db_xref="taxon:9713"
-                     /chromosome="Unknown"
-                     /sex="female"
-                     /tissue_type="liver"
+                     /organism="Rattus norvegicus"
+                     /db_xref="taxon:10116"
+                     /tissue_type="testis"
      Protein         1..466
-                     /product="citrate synthase, mitochondrial"
-                     /calculated_mol_wt=51659
+                     /product="citrate synthase"
      Region          33..459
                      /region_name="ScCit1-2_like"
                      /note="Saccharomyces cerevisiae (Sc) citrate synthases
@@ -67,17 +52,15 @@ FEATURES             Location/Qualifiers
                      /note="catalytic triad [active]"
                      /db_xref="CDD:99858"
      CDS             1..466
-                     /gene="CS"
-                     /coded_by="XM_006741012.2:177..1577"
-                     /db_xref="GeneID:102737407"
+                     /coded_by="AF461496.1:72..1472"
 ORIGIN      
-        1 malltaaarl fgaknascli laarhasasp tnlkdiladm ipkeqarikt frqqhgktvv
+        1 malltaaarl lgaknssclv laarhasass tnlkdilsnl ipkeqarvkt frqqhgktvv
        61 gqitvdmmyg gmrgmkglvy etsvldpdeg irfrgysipe cqkllpkakg geeplpeglf
-      121 wllvtgqipt eeqvswlske wakraalpsh vvtmldnfpt nlhpmsqlsa aitalnsesn
+      121 wllvtgqmpt eeqvswlsqe wakraalpsh vvtmldnfpt nlhpmsqlsa aitalnsesn
       181 farayaegin rtkyweliye dcmdliaklp cvaakiyrnl yregssigai dskldwshnf
-      241 tnmlgytdaq ftelmrlylt ihsdheggnv sahtshlvgs alsdpylsfa aamnglagpl
-      301 hglanqevlv wltqlqkevg kdvsdeklrd yiwntlnsgr vvpgyghavl rktdprytcq
-      361 refalkhlph dsmfklvaql ykivpsvlle qgkaknpwpn vdahsgvllq yygmtemnyy
-      421 tvlfgvsral gvlaqliwsr glgfplerpk smstdglmkf vdsksg
+      241 tnmlcytepq ftelmrlylt ihsdhdggnv sahtshlvgs alsdtylsfa aamnglagpl
+      301 hglanqevlv wltqlqkevg kdvsdeklrd yiwntlnsgr vvpgyghavl rktdpryscq
+      361 refalkhlpk dpmfklvaql ykivpnille qgkaknpwpn vdahsgvllq yygmtemnyy
+      421 tvlfgvsral gvlaqliwsr algfplerpk smstdglmkf vdsksg
 //
 

@@ -1,19 +1,19 @@
-LOCUS       XP_032600743             469 aa            linear   VRT 26-MAY-2021
-DEFINITION  citrate synthase, mitochondrial [Taeniopygia guttata].
-ACCESSION   XP_032600743
-VERSION     XP_032600743.1
-DBLINK      BioProject: PRJNA558048
-DBSOURCE    REFSEQ: accession XM_032744852.2
+LOCUS       XP_033927480             469 aa            linear   VRT 06-MAY-2020
+DEFINITION  citrate synthase, mitochondrial [Melopsittacus undulatus].
+ACCESSION   XP_033927480
+VERSION     XP_033927480.1
+DBLINK      BioProject: PRJNA629576
+DBSOURCE    REFSEQ: accession XM_034071589.1
 KEYWORDS    RefSeq.
-SOURCE      Taeniopygia guttata (zebra finch)
-  ORGANISM  Taeniopygia guttata
+SOURCE      Melopsittacus undulatus (budgerigar)
+  ORGANISM  Melopsittacus undulatus
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
             Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
-            Coelurosauria; Aves; Neognathae; Passeriformes; Passeroidea;
-            Estrildidae; Estrildinae; Taeniopygia.
+            Coelurosauria; Aves; Neognathae; Psittaciformes; Psittaculidae;
+            Melopsittacus.
 COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
             analysis. This record is derived from a genomic sequence
-            (NC_044242.2) annotated using gene prediction method: Gnomon,
+            (NC_047547.1) annotated using gene prediction method: Gnomon,
             supported by EST evidence.
             Also see:
                 Documentation of NCBI's Annotation Process
@@ -21,32 +21,32 @@ COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
             ##Genome-Annotation-Data-START##
             Annotation Provider         :: NCBI
             Annotation Status           :: Full annotation
-            Annotation Name             :: Taeniopygia guttata Annotation
-                                           Release 106
-            Annotation Version          :: 106
+            Annotation Name             :: Melopsittacus undulatus Annotation
+                                           Release 104
+            Annotation Version          :: 104
             Annotation Pipeline         :: NCBI eukaryotic genome annotation
                                            pipeline
-            Annotation Software Version :: 8.6
+            Annotation Software Version :: 8.4
             Annotation Method           :: Best-placed RefSeq; Gnomon
             Features Annotated          :: Gene; mRNA; CDS; ncRNA
             ##Genome-Annotation-Data-END##
             COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
      source          1..469
-                     /organism="Taeniopygia guttata"
-                     /isolate="Blue55"
-                     /db_xref="taxon:59729"
-                     /chromosome="29"
+                     /organism="Melopsittacus undulatus"
+                     /isolate="bMelUnd1"
+                     /db_xref="taxon:13146"
+                     /chromosome="21"
                      /sex="female"
-                     /tissue_type="Muscle, blood, brain"
-                     /dev_stage="adult"
-                     /country="USA"
-                     /lat_lon="36.0014 N 78.9382 W"
-                     /collected_by="Matt Biegler, Duke University and
-                     Rockefeller University"
+                     /tissue_type="blood"
+                     /dev_stage="juvenile"
+                     /country="USA: New Mexico State University"
+                     /lat_lon="32.278282 N 106.74994 W"
+                     /collection_date="02-Nov-2018"
+                     /collected_by="Timothy Wright, Justin Apodaca"
      Protein         1..469
                      /product="citrate synthase, mitochondrial"
-                     /calculated_mol_wt=51885
+                     /calculated_mol_wt=51813
      Region          36..463
                      /region_name="ScCit1-2_like"
                      /note="Saccharomyces cerevisiae (Sc) citrate synthases
@@ -56,34 +56,18 @@ FEATURES             Location/Qualifiers
                      the first step in the citric acid cycle (TCA or...;
                      cd06105"
                      /db_xref="CDD:99858"
-     Site            order(268,272,304,350..351,359,431,451)
-                     /site_type="other"
-                     /note="oxalacetate binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(268,272,303..304,344..345,347..351,359,403,431)
-                     /site_type="other"
-                     /note="citrylCoA binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(302..304,307,310,344..351,400,403,405,448)
-                     /site_type="other"
-                     /note="coenzyme A binding site [chemical binding]"
-                     /db_xref="CDD:99858"
-     Site            order(304,350,405)
-                     /site_type="active"
-                     /note="catalytic triad [active]"
-                     /db_xref="CDD:99858"
      CDS             1..469
-                     /gene="CS"
-                     /coded_by="XM_032744852.2:98..1507"
-                     /db_xref="GeneID:115491494"
+                     /gene="LOC117437343"
+                     /coded_by="XM_034071589.1:52..1461"
+                     /db_xref="GeneID:117437343"
 ORIGIN      
-        1 mtllaagsra aarlrgpkna pcvlfaarha saatnlkdvl atmipkeqak iksfrqqhgs
-       61 taigqitvdm vyggmrgmkg liyetsvldp degirfrgys ipecqkklpk aaggeeplpe
-      121 glfwllvtge iptqeqvtwl srewakraal pshvvtmldn fptnlhpmsq lsaavtalns
-      181 eskfarayae gihrakywef vyedamdlia klpcvaakiy rnlyregsgi gaidpnldws
-      241 hnftnmlgyt dpqfielmrl yltihsdheg gnvsahtshl vgsalsdpyl afaaamngla
-      301 gplhglanqe vllwltdlqk elgkdvsdek lrdfiwntln sgrvvpgygh avlrktdpry
-      361 tcqrefalkh lpqdplfklv aqlykivpnv lleqgkaknp wpnvdahsgv llqyygmkem
-      421 nyytvlfgvs ralgvlsqli wsralgfple rpksmstkgl mqlvgyksa
+        1 mtllaagsra aarlrgpknp pcvllaarca saatnlkdvl asmipkeqak iksfrqqhgs
+       61 ttigqitvdm vyggmrgmkg liyetsvldp degirfrgys ipecqkllpk aaggeeplpe
+      121 glfwllvtge mptqeqvtwl srewarraal pshvvtmldn fptnlhpmsq lsaaitalns
+      181 eskfarayae gihrakywef iyedamdlia klpcvaakiy rnlyregssi gaidpnldws
+      241 hnfanmlgya epqfielmrl yltihsdheg gnvsahtshl vgsalsdpyl afaaamngla
+      301 gplhglanqe vllwltdlqk elgtdvsdek lrdfiwntln sgrvvpgygh avlrktdpry
+      361 scqrefalkh lpqdplfklv aqlykivpnv lleqgkaknp wpnvdahsgv llqyyglkem
+      421 nyytvlfgvs ralgvlaqli wsralgfple rpksmstkgl mqlvgyksg
 //
 

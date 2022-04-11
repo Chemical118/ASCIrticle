@@ -7,8 +7,6 @@ df = pd.read_excel('Data/data.xls')  # ['Spcies', 'Reference', 'NCBI No.']
 df_list = df.values.tolist()
 
 for ind, val in enumerate(df_list):
-    # if val[0] != 'Calidris pugnax':
-    #     continue
     print(ind)
     handle = Entrez.efetch(db='protein', id=val[2], rettype='fasta', retmode='text')
     with open('Pdata/' + str(ind) + '.fasta', 'w') as f:
