@@ -1,5 +1,5 @@
 # ASCIrticle Project
-Using Random Forest in citrate synthase activity in heart muscle
+#### Using Random Forest in citrate synthase activity in heart muscle
 
 ggcheck.py : crawling google or ncbi to get protein data  
 crnbi.py : get data from NCBI
@@ -26,7 +26,7 @@ toolbox.py : having useful function
 #### &lt;Importance Random Forest Fuction&gt;
 + get_reg_importance : RF at one condition return feature importance and variable importance, answer plpot when val_mode is off
 + view_importace : using feature importance array, draw variable importance plot
-***
+
 ## Example
 ### Iteration Random Forest
 > Iteration RF function use when we want to get the best condition
