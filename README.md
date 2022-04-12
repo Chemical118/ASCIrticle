@@ -1,7 +1,6 @@
 # ASCIrticle Project
 Using Random Forest in citrate synthase activity in heart muscle
 
-***
 ggcheck.py : crawling google or ncbi to get protein data  
 crnbi.py : get data from NCBI
 confasta.py : gather .fasta file to one file  
@@ -10,7 +9,7 @@ fifasta.py : fill unknown data using the tree
 edifasta.py : edit .fasta file by erasing gap (-)   
 toolbox.py : having useful function
 #### &lt;Global variable&gt;
-+ 
++ amino_loc, amino_end_loc : the location which cutting by edifasta.py
 #### &lt;Visualization&gt;
 + get_colors, view_alignment : Using [Bokeh sequence aligner visualization program](https://dmnfarrell.github.io/bioinformatics/bokeh-sequence-aligner
 ), make protein sequence aligner
@@ -94,7 +93,6 @@ for i in range(9):
 view_importance(FI, L, show_number=20)
 # Don't worry they automatically normalize the data
 ```
-***
 ## Import module
 + biopython
 + numpy
