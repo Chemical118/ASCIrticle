@@ -1,4 +1,6 @@
+# This Index are start at 0
 amino_loc = 28
+amino_end_loc = 488
 
 
 def get_id_list():
@@ -308,7 +310,6 @@ def get_data(ami_arr=12, norm=False):
         len_list = list(map(lambda t: len(t), pro[val[0]][1].values()))
         test_loca_list[ind].append(pro[val[0]][0][np.argmax(len_list)])
 
-    print(len(test_loca_list))
     if norm:
         for i, sdata in enumerate(data):
             for ind, val in enumerate(test_loca_list):
@@ -330,7 +331,7 @@ def get_data(ami_arr=12, norm=False):
     return train_data, train_label, test_loca_list
 
 
-def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val_mode=False, r_state=2022):
+def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val_mode=False, r_state=None):
     """
     val_mode를 킨 경우에는 z numpy 배열을 반환하고,
     val_mode를 끈 경우네는 (min estimator, min feature), z를 반환한다.
@@ -340,6 +341,9 @@ def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val_mode=False, r_state=20
     from sklearn.model_selection import train_test_split
 
     import numpy as np
+
+    if r_state is None:
+        print('You are using iteration RF with randomly!')
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=split_size)
     n_feat_list = np.arange(*nfeat)
@@ -358,6 +362,7 @@ def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val_mode=False, r_state=20
     if val_mode:
         return z
     else:
+        view_reg3d(z, nfeat, ntree)
         return get_reg_value_loc(z, nfeat, ntree), z
 
 
@@ -371,7 +376,7 @@ def get_reg_value_loc(z, nfeat, ntree):
     return n_feat_list[arr_loc[0]], n_tree_list[arr_loc[1]]
 
 
-def get_reg_importance(x, y, loc, feet, tree, split_size=0.3, val_mode=False, show_number=20):
+def get_reg_importance(x, y, loc, feet, tree, split_size=0.3, val_mode=False, show_number=20, r_state=None):
     """
     val_mode를 킨 경우에는 get_amino_loc 함수를 이용해서 위치를 파악해야 한다
     """
@@ -382,16 +387,13 @@ def get_reg_importance(x, y, loc, feet, tree, split_size=0.3, val_mode=False, sh
     import numpy as np
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=split_size)
-
-    regr = RandomForestRegressor(max_depth=feet, n_estimators=tree)
+    regr = RandomForestRegressor(max_depth=feet, n_estimators=tree, random_state=r_state)
     regr.fit(x_train, y_train)
     prediction = regr.predict(x_test)
     print(mean_squared_error(y_test, prediction))
     feature_importance = regr.feature_importances_
 
-    if val_mode:
-        return feature_importance / feature_importance.max()
-    else:
+    if not val_mode:
         import matplotlib.pyplot as plot
 
         view_importance(feature_importance, loc, show_number)
@@ -406,6 +408,8 @@ def get_reg_importance(x, y, loc, feet, tree, split_size=0.3, val_mode=False, sh
         plot.ylim([0, plot.ylim()[1]])
         _ = plot.plot([-100, 100], [-100, 100], color='black')
         plot.show()
+
+    return feature_importance / feature_importance.max()
 
 
 if __name__ == "__main__":
