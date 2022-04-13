@@ -31,7 +31,9 @@
 ## 4/14
 + Pypi 업로드 하기
 + 돌연변이 이용한 단백질 개선 코드 추가해서 클래스로 같이 묶기
++ toolbox의 일부 함수는 아직 유용함 ===> 해결 방안 (함수를 class 밖으로 빼서 사용하면 될거 같긴 한데 니가 찾아보삼)
 + 이제 코딩 안하고 중간고사 공부하기
++ github에 대해서 잘 알아보기 ==> issue (프밍 교수님한테 물어보기)
 + data file 위치, 변수 위치 (tar) 인자로 추가하고 새로운 프로젝트 열어서 다시 시작하기
 + README 수정하기
   + CS 뿐만 아니라 RubisCO data도 있으니, 주제 변경하기 (#### Using Random Forest in citrate synthase activity in heart muscle) 이부분
