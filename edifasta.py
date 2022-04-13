@@ -1,6 +1,9 @@
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
-from toolbox import amino_loc, amino_end_loc, view_alignment
+from toolbox import view_alignment
+
+amino_loc = 28
+amino_end_loc = 488
 
 parse = SeqIO.parse('Data/algpdata.fasta', 'fasta')
 edit_list = []

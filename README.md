@@ -10,6 +10,7 @@ edifasta.py : edit .fasta file by erasing gap (-)
 toolbox.py : having useful function
 #### &lt;Global variable&gt;
 + amino_loc, amino_end_loc : the location which cutting by edifasta.py
++ data_loc : already alignment .fasta data file location
 #### &lt;Visualization&gt;
 + get_colors, view_alignment : Using [Bokeh sequence aligner visualization program](https://dmnfarrell.github.io/bioinformatics/bokeh-sequence-aligner
 ), make protein sequence aligner
@@ -34,12 +35,13 @@ toolbox.py : having useful function
 Be careful, when you not select random state RF will be random!
 ```python
 # Not Iteration
-from toolbox import get_reg_value, get_data
+from prorf.rfclass import RF
+R = RF('Data/cgpdata.fasta', 28)
 
 nFeat, nTree = (4, 7), (50, 500, 100)
-X, Y, L = get_data(12)
+X, Y, L = R.get_data(12)
 
-MinL, Z = get_reg_value(X, Y, nFeat, nTree, split_size=0.3, val_mode=False, r_state=1945)
+MinL, Z = R.get_reg_value(X, Y, nFeat, nTree, split_size=0.3, val_mode=False, r_state=1945)
 # When val_mode is off, you don't need to use draw function
 
 print(*MinL)
@@ -47,21 +49,22 @@ print(*MinL)
 
 ```python
 # Iteration
-from toolbox import get_reg_value, get_data, view_reg3d, get_reg_value_loc
+from prorf.rfclass import RF
+R = RF('Data/cgpdata.fasta', 28)
 
 nFeat, nTree = (4, 7), (50, 500, 100)
-X, Y, L = get_data(12)
+X, Y, L = R.get_data(12)
 ran_state = 2022
 
-Z = get_reg_value(X, Y, nFeat, nTree, split_size=0.3, val_mode=True, r_state=ran_state)
+Z = R.get_reg_value(X, Y, nFeat, nTree, split_size=0.3, val_mode=True, r_state=ran_state)
 for i in range(9):
-  Z += get_reg_value(X, Y, nFeat, nTree, split_size=0.3, val_mode=True, r_state=ran_state)
+  Z += R.get_reg_value(X, Y, nFeat, nTree, split_size=0.3, val_mode=True, r_state=ran_state)
 # total 10 times iteration
 # When val_mode is on, you need to use draw and location function
 
-view_reg3d(Z, nFeat, nTree)
+R.view_reg3d(Z, nFeat, nTree)
 # Don't worry they automatically normalize the data
-print(*get_reg_value_loc(Z, nFeat, nTree))
+print(*R.get_reg_value_loc(Z, nFeat, nTree))
 # Return tuple same as MinL (val_mode off)
 ```
 ### Importance Random Forest
@@ -69,34 +72,37 @@ print(*get_reg_value_loc(Z, nFeat, nTree))
 
 ```python
 # Confirm RF at constant condition
-from toolbox import get_reg_importance, get_data, get_amino_loc
+from prorf.rfclass import RF
+R = RF('Data/cgpdata.fasta', 28)
 
-X, Y, L = get_data(12)
+X, Y, L = R.get_data(12)
 feat, tree = 3, 300
-FI = get_reg_importance(X, Y, L, feat, tree, split_size=0.3, show_number=25, val_mode=False)
+FI = R.get_reg_importance(X, Y, L, feat, tree, split_size=0.3, show_number=25, val_mode=False)
 # val_mode is off, so they draw prediction-tree value plot and impotance plot
 
 # To get amino loaction for get_amino_loc and sorted by amino index
-for loc, im in sorted(list(zip(get_amino_loc(L), FI)), key=lambda t: t[0]):
+for loc, im in sorted(list(zip(R.get_amino_loc(L), FI)), key=lambda t: t[0]):
     print("%d location Importance : %.4f" % (loc, im))
 ```
+
 ```python
 # To get importace of amino location
-from toolbox import get_reg_importance, get_data, view_importance
+from prorf.rfclass import RF
+R = RF('Data/cgpdata.fasta', 28)
 
-X, Y, L = get_data(12)
+X, Y, L = R.get_data(12)
 feat, tree, ran_state = 3, 300, 2022
-FI = get_reg_importance(X, Y, L, feat, tree, split_size=0.3, val_mode=True, r_state=ran_state)
+FI = R.get_reg_importance(X, Y, L, feat, tree, split_size=0.3, val_mode=True, r_state=ran_state)
 for i in range(9):
-    FI += get_reg_importance(X, Y, L, feat, tree, split_size=0.3, val_mode=True, r_state=ran_state)
+    FI += R.get_reg_importance(X, Y, L, feat, tree, split_size=0.3, val_mode=True, r_state=ran_state)
 
-view_importance(FI, L, show_number=20)
+R.view_importance(FI, L, show_number=20)
 # Don't worry they automatically normalize the data
 ```
 ## Import module
 + biopython
 + numpy
-+ bokek
++ bohek
 + pandas
 + bidict
 + matplotlib

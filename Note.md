@@ -27,3 +27,12 @@
 
 ## 4/13
 + amino acid의 샘플별 위치 데이터를 바탕으로 Noramilze된 위치를 다시 반환하자 (힘들수도?)
+
+## 4/14
++ Pypi 업로드 하기
++ 돌연변이 이용한 단백질 개선 코드 추가해서 클래스로 같이 묶기
++ 이제 코딩 안하고 중간고사 공부하기
++ data file 위치, 변수 위치 (tar) 인자로 추가하고 새로운 프로젝트 열어서 다시 시작하기
++ README 수정하기
+  + CS 뿐만 아니라 RubisCO data도 있으니, 주제 변경하기 (#### Using Random Forest in citrate synthase activity in heart muscle) 이부분
+  + 필수적인 data .fasta file의 이름 추가하기 (cgpdata, rgpdata => RuBisCO)

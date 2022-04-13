@@ -2,7 +2,7 @@ from Bio import Entrez
 
 import pandas as pd
 
-Entrez.email = 'socialhomework209@gmail.com'
+Entrez.email = 'wowo0118@korea.ac.kr'
 df = pd.read_excel('Data/data.xls')  # ['Spcies', 'Reference', 'NCBI No.']
 df_list = df.values.tolist()
 

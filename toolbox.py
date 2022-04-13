@@ -1,11 +1,11 @@
-# This Index are start at 0
+# This Index is start at 0
 amino_loc = 28
-amino_end_loc = 488
+data_loc = 'Data/cgpdata.fasta'
 
 
 def get_id_list():
     from Bio import SeqIO
-    return list(map(lambda t: t.id, SeqIO.parse('Data/gpdata.fasta', 'fasta')))
+    return list(map(lambda t: t.id, SeqIO.parse(data_loc, 'fasta')))
 
 
 def get_colors(seqs):
@@ -241,7 +241,7 @@ def data_list():
     df = pd.read_excel('Data/data.xls')
     df_list = df.values.tolist()
     df_list = list(map(lambda te: [*te[::-1]], enumerate(df_list)))
-    for ind, val in enumerate(SeqIO.parse('Data/cgpdata.fasta', 'fasta')):
+    for ind, val in enumerate(SeqIO.parse(data_loc, 'fasta')):
         df_list[ind].insert(0, str(val.seq))
     return df_list
 
@@ -343,7 +343,7 @@ def get_reg_value(x, y, nfeat, ntree, split_size=0.3, val_mode=False, r_state=No
     import numpy as np
 
     if r_state is None:
-        print('You are using iteration RF with randomly!')
+        print('You are using iteration RF randomly!')
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=split_size)
     n_feat_list = np.arange(*nfeat)
