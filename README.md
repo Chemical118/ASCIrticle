@@ -7,8 +7,8 @@
 `alnfasta.py` : align protein sequencr using clustal omega  
 `fifasta.py` : fill unknown data using the tree  
 `edifasta.py `: edit .fasta file by erasing gap (-)   
-`prorf`: packakge for Random Forest
-## Description
+`prorf`: package for Random Forest
+## Package Description
 ### `prorf.rfclass`
 #### `RF` : Random Forest Class
 + `get_data` : return X, Y, L (location array) you must use .xls file and make index column
