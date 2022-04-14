@@ -6,7 +6,7 @@
 `confasta.py` : gather .fasta file to one file  
 `alnfasta.py` : align protein sequencr using clustal omega  
 `fifasta.py` : fill unknown data using the tree  
-`edifasta.py `: edit .fasta file by erasing gap (-)   
+`edifasta.py`: edit .fasta file by erasing gap (-)   
 `prorf`: package for Random Forest
 ## Package Description
 ### `prorf.rfclass`
