@@ -14,7 +14,7 @@
 + `get_data` : return X, Y, L (location array) you must use .xls file and make index column
   + `__process`, `__data_list` : return various data
 + `get_id_list` : return data id list
-+ `get_amino_loc` : using location array; `get_data()[2]`, return amino acid loaction array
++ `get_amino_loc` : using location array; `get_data(...)[2]`, return amino acid loaction array
 + `view_alignment` : call `prorf.rfunction.view_alignment`
 
 `RFI` : Iteration Random Forest Class which inherit from `RF`
