@@ -75,7 +75,7 @@ R.view_importance(FI, L, show_number=20)
 # Don't worry they automatically normalize the data
 ```
 ### Iteration Random Forest
-> Iteration RF class; `RFI` use when we want to get the best condition
+> Iteration RF; `RFI` use when we want to get the best condition
 
 Be careful about randomness, always be aware of `data_state` and `learn_state`
 ```python
