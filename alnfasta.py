@@ -1,5 +1,5 @@
 from Bio.Align.Applications import ClustalOmegaCommandline
-from toolbox import view_alignment
+from prorf.rfunction import view_sequence
 
 import os
 
@@ -7,4 +7,4 @@ cline = ClustalOmegaCommandline(infile='Data/gpdata.fasta',
                                 outfile='Data/algpdata.fasta', verbose=True, force=True)
 os.system(str(cline))
 
-view_alignment('Data/algpdata.fasta')
+view_sequence('Data/algpdata.fasta')

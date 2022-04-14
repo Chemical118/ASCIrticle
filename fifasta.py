@@ -1,13 +1,15 @@
 from dendropy.calculate import treemeasure
+from prorf.rfclass import RF
 from Bio import SeqIO
 from Bio.Seq import Seq
-from toolbox import get_id_list
 from bidict import bidict
 
 import dendropy as de
 import numpy as np
 
-id_list = get_id_list()
+R = RF('Data/algpdata.fasta', '')
+R.view_sequence()
+id_list = R.get_id_list()
 bdict = bidict()
 sdict = dict()
 
