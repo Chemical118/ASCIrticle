@@ -41,7 +41,7 @@ R.view_sequence()
 
 X, Y, L = R.get_data(9, 'E')  # Excel data column
 feat, tree, ran_state = 5, 300, 2022
-FI = R.get_reg_importance(X, Y, L, feat, tree, split_size=0.3, show_number=25, val_mode=False, data_state=ran_state, learn_state=ran_state)
+R.get_reg_importance(X, Y, L, feat, tree, split_size=0.3, show_number=25, val_mode=False, data_state=ran_state, learn_state=ran_state)
 # val_mode is off, so they draw prediction-tree value plot and impotance plot
 ```
 
