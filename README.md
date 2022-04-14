@@ -2,19 +2,19 @@
 #### Using Random Forest in enzyme for various variables
 
 `ggcheck.py` : crawling google or ncbi to get protein data  
-`crnbi.py` : get data from NCBI
+`crnbi.py` : get data from NCBI  
 `confasta.py` : gather .fasta file to one file  
 `alnfasta.py` : align protein sequencr using clustal omega  
 `fifasta.py` : fill unknown data using the tree  
 `edifasta.py `: edit .fasta file by erasing gap (-)   
-`prorf `: packakge for Random Forest
+`prorf`: packakge for Random Forest
 ## Description
 ### `prorf.rfclass`
 #### `RF` : Random Forest Class
 + `get_data` : return X, Y, L (location array) you must use .xls file and make index column
   + `__process`, `__data_list` : return various data
 + `get_id_list` : return data id list
-+ `get_amino_loc` : using location array (at get_data[2]), return amino acid loaction array
++ `get_amino_loc` : using location array; `get_data()[2]`, return amino acid loaction array
 + `view_alignment` : call `prorf.rfunction.view_alignment`
 #### `RFI` : Iteration Random Forest Class which inherit from `RF`
 + `get_reg_value` : RF at nfeat, ntree range return MSE arraay or MSE array and min loc tuple by val_mode on/off
